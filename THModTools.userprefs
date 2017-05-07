@@ -1,0 +1,24 @@
+﻿<Properties StartupItem="THModTools/THModTools.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="THModTools/Preprocessor.cs">
+    <Files>
+      <File FileName="THModTools/Program.cs" Line="1" Column="1" />
+      <File FileName="THModTools/THTK.cs" Line="1" Column="1" />
+      <File FileName="THModTools/Platform.cs" Line="1" Column="1" />
+      <File FileName="THModTools/Project.cs" Line="1" Column="1" />
+      <File FileName="THModTools/Info.cs" Line="1" Column="1" />
+      <File FileName="THModTools/UI.cs" Line="1" Column="1" />
+      <File FileName="THModTools/ANMScriptWriter.cs" Line="1" Column="1" />
+      <File FileName="THModTools/ANMScriptReader.cs" Line="1" Column="1" />
+      <File FileName="THModTools/ECLScriptReader.cs" Line="1" Column="1" />
+      <File FileName="THModTools/ECLScriptWriter.cs" Line="1" Column="1" />
+      <File FileName="THModTools/STD.cs" Line="1" Column="1" />
+      <File FileName="THModTools/STDInst.cs" Line="1" Column="1" />
+      <File FileName="THModTools/Preprocessor.cs" Line="12" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
