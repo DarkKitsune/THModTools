@@ -237,7 +237,7 @@ namespace THModTools
 
 				PrintOutput(RunGetProcess("thecl", SourceDir, "c" + Version + " " + tempfile + " " + eclfile));
 
-				//File.Delete(tempfile);
+				File.Delete(tempfile);
 				Console.WriteLine("Done");
 			}
 		}
