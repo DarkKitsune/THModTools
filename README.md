@@ -7,8 +7,7 @@ A Touhou mod toolset
 + Legend of Lunatic Kingdom
 
 ## Libraries require to build:
-+ MoonSharp (has NuGet package)
-+ SFML.NET (has NuGet package)
++ ini-parser (available on NuGet)
 
 ## Getting started:
 First make a directory in the same folder as THModTools.exe named "thtk", then you must put the latest THTK binaries for your platform in that folder. 
