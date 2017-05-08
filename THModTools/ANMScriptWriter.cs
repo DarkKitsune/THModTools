@@ -33,6 +33,32 @@ namespace THModTools
 					{ 425, "setScrollY" },
 					{ 426, "setScrollX" }
 				}
+			},
+			{
+				16,
+				new Dictionary<int, string>()
+				{
+					{ 1, "end" },
+					{ 2, "return" },
+					{ 200, "jump" },
+					{ 300, "setSprite" },
+					{ 301, "setSpriteRandom" },
+					{ 302, "setSpriteMode" },
+					{ 303, "setBlendMode" },
+					{ 304, "setLayer" },
+					{ 308, "flip" },
+					{ 400, "setPosition" },
+					{ 401, "setAngle" },
+					{ 402, "setScale" },
+					{ 404, "setAngle" },
+					{ 407, "move" },
+					{ 408, "changeColor" },
+					{ 409, "changeAlpha" },
+					{ 410, "changeAngle" },
+					{ 412, "changeScale" },
+					{ 425, "setScrollY" },
+					{ 426, "setScrollX" }
+				}
 			}
 		};
 

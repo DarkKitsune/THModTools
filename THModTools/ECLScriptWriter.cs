@@ -326,6 +326,144 @@ namespace THModTools
 					{ 632, "setShotDetectMode" },
 					{ 637, "unknown_637" },
 				}
+			},
+			{
+				16,
+				new Dictionary<int, string>()
+				{
+					{ 1, "delete" },
+					{ 10, "return" },
+					{ 11, "call" },
+					{ 12, "jump" },
+					{ 13, "jumpIfNot" },
+					{ 14, "jumpIf" },
+					{ 15, "task" },
+					{ 22, "callID" },
+					{ 23, "wait" },
+
+					{ 42, "push" },
+					{ 43, "pop" },
+					{ 44, "pushf" },
+					{ 45, "popf" },
+
+					{ 50, "add" },
+					{ 51, "addf" },
+					{ 52, "sub" },
+					{ 53, "subf" },
+					{ 54, "mul" },
+					{ 55, "mulf" },
+					{ 56, "div" },
+					{ 57, "divf" },
+					{ 58, "mod" },
+					{ 59, "eq" },
+					{ 60, "eqf" },
+					{ 61, "neq" },
+					{ 62, "neqf" },
+					{ 63, "lt" },
+					{ 64, "ltf" },
+					{ 65, "lteq" },
+					{ 66, "lteqf" },
+					{ 67, "gt" },
+					{ 68, "gtf" },
+					{ 69, "gteq" },
+					{ 70, "gteqf" },
+					{ 73, "or" },
+					{ 74, "and" },
+
+					{ 78, "dec" },
+
+					{ 81, "cosSin" },
+
+					{ 83, "invSub" },
+					{ 84, "invSubf" },
+
+					{ 300, "createObject" },
+					{ 301, "createObjectAt" },
+					{ 304, "createObjectMirrored" },
+					{ 309, "createObject2" },
+					{ 311, "createObject3" },
+
+					{ 302, "setAnm" },
+					{ 303, "setSprite" },
+					{ 306, "setSpriteEnemy" },
+					{ 307, "effect" },
+					{ 308, "effect2" },
+					{ 325, "setSpriteColor" },
+					{ 328, "setSpriteAlpha" },
+					{ 329, "setSpriteScale" },
+					{ 330, "changeSpriteScale" },
+					{ 334, "attachEffect" },
+					{ 336, "attachEffect2" },
+
+					{ 400, "setPosition" },
+					{ 401, "move" },
+					{ 402, "setPosition2" },
+					{ 404, "setMotion" },
+					{ 405, "changeMotion" },
+					{ 412, "moveRandom" },
+					{ 426, "moveCurve" },
+					{ 441, "changeAngle" },
+					{ 445, "changeSpeed" },
+
+					{ 500, "setHitbox" },
+					{ 501, "setKillbox" },
+					{ 502, "setFlags" },
+					{ 503, "clearFlags" },
+					{ 504, "setMovementArea" },
+					{ 506, "clearDrops" },
+					{ 507, "addDrop" },
+					{ 508, "setDropArea" },
+					{ 509, "drop" },
+					{ 510, "setItem" },
+					{ 511, "setLife" },
+					{ 512, "setBossMode" },
+					{ 513, "startAttack" },
+					{ 514, "addAttack" },
+					{ 515, "setInvulnerableTime" },
+					{ 516, "playSound" },
+
+					{ 518, "startMsg" },
+					{ 519, "waitMsgEnd" },
+					{ 520, "waitBossEnd" },
+
+					{ 524, "setCheckpoint" },
+					{ 525, "deleteChildrenObjects" },
+					{ 527, "setLifebarRegion" },
+
+					{ 535, "setByDifficulty" },
+					{ 536, "setByDifficultyf" },
+					{ 547, "setTimeScale" },
+					{ 548, "waitByDifficulty" },
+
+					{ 556, "callOnDeath" },
+
+					{ 600, "createShot" },
+					{ 601, "fireShot" },
+					{ 602, "setShotGraphic" },
+					{ 603, "setShotOffset" },
+					{ 604, "setShotAngle" },
+					{ 605, "setShotSpeed" },
+					{ 606, "setShotCount" },
+					{ 607, "setShotType" },
+					{ 608, "setShotSound" },
+					{ 609, "setShotPattern" },
+					{ 610, "setShotPattern2" },
+					{ 611, "setShotPattern3" },
+					{ 612, "setShotPattern4" },
+					{ 613, "deleteShots" },
+					{ 615, "itemizeShotsCircle" },
+					{ 616, "deleteShotsCircle" },
+					{ 624, "setShotSpeedByDifficulty" },
+					{ 625, "setShotCountByDifficulty" },
+					{ 626, "setShotOffsetPolar" },
+					{ 627, "setShotOffsetCircle" },
+					{ 640, "setShotCreateObject" },
+
+					{ 629, "setAura" },
+
+					{ 632, "setShotDetectMode" },
+					{ 637, "unknown_637" },
+				}
 			}
 		};
 
@@ -378,13 +516,38 @@ namespace THModTools
 					{ 611, ShotPattern2Action },
 					{ 612, ShotPattern3Action }
 				}
+			},
+			{
+				16,
+				new Dictionary<int, Action<string[]>>()
+				{
+					{ 11, CallArgAction },
+					{ 15, CallArgAction },
+					{ 22, CallIDArgAction },
+					{ 302, SetAnmArgAction },
+					{ 330, TweenArg2Action },
+					{ 401, TweenArg1Action },
+					{ 405, TweenArg1Action },
+					{ 412, TweenArg1Action },
+					{ 441, TweenArg1Action },
+					{ 445, TweenArg1Action },
+					{ 502, ECL10Flags },
+					{ 503, ECL10Flags },
+					{ 512, BossModeAction },
+					{ 607, ShotTypeAction },
+					{ 609, ShotPattern0Action },
+					{ 610, ShotPattern1Action },
+					{ 611, ShotPattern2Action },
+					{ 612, ShotPattern3Action }
+				}
 			}
 		};
 
 		public static Dictionary<int, Dictionary<string, string>> Globals = new Dictionary<int, Dictionary<string, string>>()
 		{
 			{ 14, ECL10Globals },
-			{ 15, ECL10Globals }
+			{ 15, ECL10Globals },
+			{ 16, ECL10Globals }
 		};
 
 		static Regex RegExInst = new Regex(@"\bins_(\d+)\((.*)\);", RegexOptions.Compiled);

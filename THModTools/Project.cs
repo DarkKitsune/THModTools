@@ -17,7 +17,7 @@ namespace THModTools
 		public static string IniPath;
 
 		static int[] Versions = new int[] {
-			6, 7, 8, 9, 95, 10, 105, 11, 12, 123, 125, 128, 13, 14, 143, 15
+			6, 7, 8, 9, 95, 10, 105, 11, 12, 123, 125, 128, 13, 14, 143, 15, 16
 		};
 
 		public static string[] BuildFiles

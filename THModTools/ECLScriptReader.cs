@@ -117,6 +117,17 @@ namespace THModTools
 					{ "setBossMode", SetBossModeArgAction },
 					{ "setAnm", SetAnmArgAction }
 				}
+			},
+			{
+				16,
+				new Dictionary<string, Action<string[]>>()
+				{
+					{ "call", CallArgAction },
+					{ "task", CallArgAction },
+					{ "callID", CallIDArgAction },
+					{ "setBossMode", SetBossModeArgAction },
+					{ "setAnm", SetAnmArgAction }
+				}
 			}
 		};
 
@@ -188,6 +199,42 @@ namespace THModTools
 						}
 					}
 				}
+			},
+			{
+				16,
+				new Dictionary<string, MacroFunction>()
+				{
+					{ "rad", new MacroFunction() 
+						{
+							Args = new ECLType[] { ECLType.Expression },
+							Function = (args) => {
+								return args[0] + " * 0.0174533f";
+							}
+						}
+					},
+					{ "rgb", new MacroFunction() 
+						{
+							Args = new ECLType[] { ECLType.Expression, ECLType.Expression, ECLType.Expression },
+							Function = (args) => {
+								return args[0] + " * 65536 + " + args[1] + " * 256 + " + args[2];
+							}
+						}
+					},
+					{ "initAttack", new MacroFunction() 
+						{
+							Args = new ECLType[] { },
+							Function = (args) => {
+								return "setBossMode(TRUE);\n" +
+									"system.misses = 0;\n" +
+									"system.spellsUsed = 0;\n" +
+									"system.failed = 1;\n" +
+									"deleteChildrenObjects();\n" +
+									"startAttack();\n" +
+									"createObject(\"Ecl_EtBreak_ni\", 0.0f, 0.0f, 9999, 0, 0)";
+							}
+						}
+					}
+				}
 			}
 		};
 
@@ -199,6 +246,10 @@ namespace THModTools
 			},
 			{
 				15,
+				ECL10Constants
+			},
+			{
+				16,
 				ECL10Constants
 			}
 		};

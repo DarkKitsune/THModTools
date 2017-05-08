@@ -39,6 +39,26 @@ namespace THModTools
 					new STDInst {ID = 16, Name = "ins_16", Size = 12, Args = "c"},
 					new STDInst {ID = 18, Name = "ins_18", Size = 28, Args = "bbbbbbbbbbbbbbbbbbbb"},
 				}
+			},
+			{
+				16,
+				new STDInst[]
+				{
+					new STDInst {ID = 1, Name = "jump", Size = 16, Args = "lU"},
+					new STDInst {ID = 2, Name = "setCameraPos", Size = 20, Args = "fff"},
+					new STDInst {ID = 3, Name = "moveCamera", Size = 28, Args = "UUfff"},
+					new STDInst {ID = 4, Name = "setCameraTarget", Size = 20, Args = "fff"},
+					new STDInst {ID = 5, Name = "moveCameraTarget", Size = 28, Args = "UUfff"},
+					new STDInst {ID = 6, Name = "setCameraForward", Size = 20, Args = "fff"},
+					new STDInst {ID = 7, Name = "setCameraFOV", Size = 12, Args = "f"},
+					new STDInst {ID = 8, Name = "setFog", Size = 20, Args = "cff"},
+					new STDInst {ID = 9, Name = "changeFog", Size = 28, Args = "UUcff"},
+					new STDInst {ID = 12, Name = "ins_12", Size = 12, Args = "bbbb"},
+					new STDInst {ID = 13, Name = "ins_13", Size = 12, Args = "c"},
+					new STDInst {ID = 14, Name = "ins_14", Size = 20, Args = "bbbbbbbbbbbb"},
+					new STDInst {ID = 16, Name = "ins_16", Size = 12, Args = "c"},
+					new STDInst {ID = 18, Name = "ins_18", Size = 28, Args = "bbbbbbbbbbbbbbbbbbbb"},
+				}
 			}
 		};
 

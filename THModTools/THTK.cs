@@ -73,6 +73,8 @@ namespace THModTools
 			var vername = Version.ToString();
 			if (vername.Length == 1)
 				vername = "0" + vername;
+			if (vername == "16")
+				vername += "tr";
 
 			return "th" + vername + ".dat";
 		}
@@ -100,7 +102,7 @@ namespace THModTools
 				if (File.Exists(path))
 				{
 					Console.WriteLine("Extracting DAT archive...");
-					PrintOutput(RunGetProcess("thdat", Project.DirBuildFiles, "x" + Version + " " + path));
+					PrintOutput(RunGetProcess("thdat", Project.DirBuildFiles, "x" +  (Version == 16 ? 15 : Version) + " " + path));
 					Console.WriteLine("Done");
 				}
 				else
@@ -117,7 +119,7 @@ namespace THModTools
 				Console.WriteLine("Creating DAT archive...");
 				PrintOutput(RunGetProcess("thdat",
 					Project.DirBuild,
-					"c" + Version + " " + Project.DirBuild + ChooseDatName() +
+					"c" + (Version == 16 ? 15 : Version) + " " + Project.DirBuild + ChooseDatName() +
 					" " + String.Join(" ", Project.BuildFiles)
 				));
 				Console.WriteLine("Done");
