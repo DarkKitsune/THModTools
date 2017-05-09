@@ -18,9 +18,11 @@ namespace THModTools
 
 		static string Run(string prgm, string directory, string arg)
 		{
-			if (!Directory.Exists(TOOLPATH))
+			Console.WriteLine(Directory.Exists(Info.ProgramDirectory + "/" + TOOLPATH));
+			if (!Directory.Exists(Info.ProgramDirectory + "/" + TOOLPATH))
 			{
 				System.Windows.Forms.MessageBox.Show("THTK binaries were not found in " + new DirectoryInfo(TOOLPATH).FullName);
+				return "Could not finish.";
 			}
 
 			var path = TOOLPATH + prgm;
@@ -38,6 +40,7 @@ namespace THModTools
 			info.WorkingDirectory = directory;
 			info.UseShellExecute = false;
 			info.RedirectStandardOutput = true;
+			info.RedirectStandardError = true;
 
 			string ret;
 			using (var proc = Process.Start(info))
@@ -47,6 +50,9 @@ namespace THModTools
 					while (!proc.HasExited)
 					{
 						def.Write(proc.StandardOutput.ReadToEnd());
+						var err = proc.StandardError.ReadToEnd();
+						if (err.Length > 0)
+							def.Write("\nERROR: " + err + "\n");
 					}
 					ret = def.ToString();
 				}
@@ -57,6 +63,13 @@ namespace THModTools
 
 		static Process RunGetProcess(string prgm, string directory, string arg)
 		{
+			Console.WriteLine(Directory.Exists(Info.ProgramDirectory + "/" + TOOLPATH));
+			if (!Directory.Exists(Info.ProgramDirectory + "/" + TOOLPATH))
+			{
+				System.Windows.Forms.MessageBox.Show("THTK binaries were not found in " + new DirectoryInfo(TOOLPATH).FullName);
+				return null;
+			}
+
 			var path = TOOLPATH + prgm;
 
 			switch (Platform.ID)
@@ -66,12 +79,13 @@ namespace THModTools
 					break;
 			}
 
-			var prgmPath = Info.ProgramDirectory + "/" + TOOLPATH + prgm;
+			var prgmPath = Info.ProgramDirectory + "/" + path;
 
 			var info = new ProcessStartInfo(prgmPath, arg);
 			info.WorkingDirectory = directory;
 			info.UseShellExecute = false;
 			info.RedirectStandardOutput = true;
+			info.RedirectStandardError = true;
 
 			var proc = Process.Start(info);
 
@@ -91,12 +105,17 @@ namespace THModTools
 
 		static void PrintOutput(Process proc)
 		{
+			if (proc == null)
+				return;
 			Console.WriteLine("*****THTK Output:*****");
 			while (!proc.HasExited)
 			{
 				var read = proc.StandardOutput.ReadToEnd();
 				if (read.Length > 0)
 					Console.WriteLine(read);
+				var err = proc.StandardError.ReadToEnd();
+				if (err.Length > 0)
+					Console.WriteLine("\nERROR: " + err + "\n");
 			}
 			proc.Dispose();
 			Console.WriteLine("**********************");
