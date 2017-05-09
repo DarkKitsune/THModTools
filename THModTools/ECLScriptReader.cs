@@ -587,7 +587,7 @@ namespace THModTools
 
 
 				line = prologue + line;
-				var lines = line.Split('\n');
+				var lines = line.Replace("\r", "").Split('\n');
 				foreach (var ln  in lines)
 					if (ln.Trim() != "")
 						output.Add(ln);

@@ -18,7 +18,6 @@ namespace THModTools
 
 		static string Run(string prgm, string directory, string arg)
 		{
-			Console.WriteLine(Directory.Exists(Info.ProgramDirectory + "/" + TOOLPATH));
 			if (!Directory.Exists(Info.ProgramDirectory + "/" + TOOLPATH))
 			{
 				System.Windows.Forms.MessageBox.Show("THTK binaries were not found in " + new DirectoryInfo(TOOLPATH).FullName);
@@ -63,7 +62,6 @@ namespace THModTools
 
 		static Process RunGetProcess(string prgm, string directory, string arg)
 		{
-			Console.WriteLine(Directory.Exists(Info.ProgramDirectory + "/" + TOOLPATH));
 			if (!Directory.Exists(Info.ProgramDirectory + "/" + TOOLPATH))
 			{
 				System.Windows.Forms.MessageBox.Show("THTK binaries were not found in " + new DirectoryInfo(TOOLPATH).FullName);
@@ -172,7 +170,7 @@ namespace THModTools
 						Console.WriteLine("Extracting " + file);
 						var name = new FileInfo(file).Name.Replace(".anm", ".anm.txt");
 						File.WriteAllLines(SourceDir + name, ANMScriptWriter.WriteScript(
-							Run("thanm", Project.DirSource, "l" + " " + file).Split('\n')
+                            Run("thanm", Project.DirSource, "l" + " " + file).Replace("\r", "").Split('\n')
 						));
 						PrintOutput(RunGetProcess("thanm", SourceDir, "x" + " " + file));
 					}
@@ -231,7 +229,7 @@ namespace THModTools
 						Console.WriteLine("Extracting " + file);
 						var name = new FileInfo(file).Name.Replace(".ecl", ".ecl.txt");
 						File.WriteAllLines(SourceDir + name, ECLScriptWriter.WriteScript(
-							Run("thecl", Project.DirSource, "d" + Version + " " + file).Split('\n')
+							Run("thecl", Project.DirSource, "d" + Version + " " + file).Replace("\r", "").Split('\n')
 						));
 					}
 				}
