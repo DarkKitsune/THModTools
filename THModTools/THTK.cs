@@ -9,10 +9,20 @@ namespace THModTools
 	{
 		const string TOOLPATH = "thtk/";
 
+		static THTK()
+		{
+			
+		}
+
 		public static int Version = 15;
 
 		static string Run(string prgm, string directory, string arg)
 		{
+			if (!Directory.Exists(TOOLPATH))
+			{
+				System.Windows.Forms.MessageBox.Show("THTK binaries were not found in " + new DirectoryInfo(TOOLPATH).FullName);
+			}
+
 			var path = TOOLPATH + prgm;
 
 			switch (Platform.ID)
@@ -22,7 +32,7 @@ namespace THModTools
 					break;
 			}
 
-			var prgmPath = Info.ProgramDirectory + "/" + TOOLPATH + prgm;
+			var prgmPath = Info.ProgramDirectory + "/" + path;
 
 			var info = new ProcessStartInfo(prgmPath, arg);
 			info.WorkingDirectory = directory;

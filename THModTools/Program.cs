@@ -9,6 +9,7 @@ namespace THModTools
 	{
 		static UI MainUI;
 
+		[STAThread]
 		public static void Main(string[] args)
 		{
 			Directory.CreateDirectory(Project.DirBuildFiles);

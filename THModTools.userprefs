@@ -1,20 +1,20 @@
 ﻿<Properties StartupItem="THModTools/THModTools.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="THModTools/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="THModTools/ECLScriptWriter.cs">
     <Files>
       <File FileName="THModTools/Program.cs" Line="108" Column="50" />
-      <File FileName="THModTools/THTK.cs" Line="240" Column="5" />
+      <File FileName="THModTools/THTK.cs" Line="77" Column="21" />
       <File FileName="THModTools/Platform.cs" Line="1" Column="1" />
-      <File FileName="THModTools/Project.cs" Line="1" Column="1" />
+      <File FileName="THModTools/Project.cs" Line="20" Column="71" />
       <File FileName="THModTools/Info.cs" Line="1" Column="1" />
       <File FileName="THModTools/UI.cs" Line="1" Column="1" />
-      <File FileName="THModTools/ANMScriptWriter.cs" Line="1" Column="1" />
+      <File FileName="THModTools/ANMScriptWriter.cs" Line="37" Column="5" />
       <File FileName="THModTools/ANMScriptReader.cs" Line="1" Column="1" />
-      <File FileName="THModTools/ECLScriptReader.cs" Line="1" Column="1" />
-      <File FileName="THModTools/ECLScriptWriter.cs" Line="1" Column="1" />
-      <File FileName="THModTools/STD.cs" Line="1" Column="1" />
+      <File FileName="THModTools/ECLScriptReader.cs" Line="252" Column="7" />
+      <File FileName="THModTools/ECLScriptWriter.cs" Line="831" Column="27" />
+      <File FileName="THModTools/STD.cs" Line="44" Column="7" />
       <File FileName="THModTools/STDInst.cs" Line="1" Column="1" />
-      <File FileName="THModTools/Preprocessor.cs" Line="12" Column="3" />
+      <File FileName="THModTools/Preprocessor.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
