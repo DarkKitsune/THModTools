@@ -24,12 +24,13 @@ namespace THModTools
 					{ 400, "setPosition" },
 					{ 401, "setAngle" },
 					{ 402, "setScale" },
-					{ 404, "setAngle" },
+					{ 404, "setColor" },
 					{ 407, "move" },
 					{ 408, "changeColor" },
 					{ 409, "changeAlpha" },
 					{ 410, "changeAngle" },
 					{ 412, "changeScale" },
+                    { 421, "setCenter" },
 					{ 425, "setScrollY" },
 					{ 426, "setScrollX" }
 				}
@@ -50,12 +51,13 @@ namespace THModTools
 					{ 400, "setPosition" },
 					{ 401, "setAngle" },
 					{ 402, "setScale" },
-					{ 404, "setAngle" },
+					{ 404, "setColor" },
 					{ 407, "move" },
 					{ 408, "changeColor" },
 					{ 409, "changeAlpha" },
 					{ 410, "changeAngle" },
 					{ 412, "changeScale" },
+                    { 421, "setCenter" },
 					{ 425, "setScrollY" },
 					{ 426, "setScrollX" }
 				}
